@@ -1,0 +1,144 @@
+/* Shared CSS across all HTML pages */
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Tablet menu */
+#tabMenu {
+  display: none;
+  padding: 2%;
+  text-decoration: none;
+}
+
+#tabMenu a {
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;   
+}
+
+#tabMenu #tabLogo {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+i:hover {
+  color: goldenrod;
+}
+
+/* Dropdown menu */
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Desktop Navigation Bar */
+.navBar {
+    /* display: none; */
+    overflow: hidden;
+}
+  
+/* Navigation Links */
+.navBar a {
+  font-family: 'Oswald', sans-serif;
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+  
+.navBar a:hover {
+  border-bottom: 3px solid goldenrod;
+}
+
+.navBar a.active {
+  border-bottom: 3px solid goldenrod;
+}
+
+.navBar #navLogo {
+    float: right;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}
+
+#pageLogo {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    border-top: 1px lightgrey solid;
+}
+
+.logo { 
+    display: block;
+    margin: 2% auto; 
+} 
+
+.clearfix {
+    clear: both;
+}
+
+
+/* Footer */
+#footer{
+    border-top: lightgrey 1px solid;
+    text-align: center;
+    font-family: 'Trispace';
+    color: black;
+    height: 50px;
+}
+
+p {
+    display: block;
+    margin: 1em 0;  
+}
+
+
+
+@media screen and (max-width: 800px) {
+    #tabMenu { 
+         display: block; 
+    }
+    .navBar { 
+         display: none; 
+    }
+}
