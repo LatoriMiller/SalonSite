@@ -1,11 +1,10 @@
-CREATE DATABASE products;
+CREATE DATABASE IF NOT EXISTS products;
 USE products;
-
-CREATE TABLE products (name VARCHAR(20), description VARCHAR(120), price DECIMAL, image VARCHAR(120), category VARCHAR(30));
+CREATE TABLE IF NOT EXISTS products (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(120), description VARCHAR(120), price DECIMAL, image VARCHAR(120), category VARCHAR(30), PRIMARY KEY (id));
 
 INSERT INTO products (name, description, price, image, category)
 VALUES 
-("Salon Tools", "Salon Latori ipsum lorem. Lorem ipsum lorem haircare", 300.00, "images/salonTools.jpg", "tools"),
+("Salon Tools", "Salon Latori this is Kat test. Lorem ipsum lorem haircare", 300.00, "images/salonTools.jpg", "tools"),
 ("Shampoo", "Salon Latori ipsum lorem. Lorem ipsum lorem haircare", 20.00, "images/shampoo.jpg", "haircare"),
 ("Eyeliner", "Salon Latori ipsum lorem. Lorem ipsum lorem haircare", 30.00, "images/redPencils.jpg", "makeup"),
 ("Brush Set", "Salon Latori ipsum lorem. Lorem ipsum lorem haircare", 130.00, "images/blueBrushset.jpg", "makeup"),
