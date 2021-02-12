@@ -11,12 +11,12 @@ import (
 )
 
 type product struct {
-	ID          string `json:"id"`
-	Name        string `json:"name"`
-	Price       string `json:"price"`
-	Image       string `json:"image"`
-	Category    string `json:"category"`
-	Description string `json:"description"`
+	ID          int     `json:"id"`
+	Name        string  `json:"name"`
+	Price       float32 `json:"price"`
+	Image       string  `json:"image"`
+	Category    string  `json:"category"`
+	Description string  `json:"description"`
 }
 
 func enableCors(w *http.ResponseWriter) {
@@ -40,8 +40,7 @@ func fetchProducts(w http.ResponseWriter, r *http.Request) {
 	enableCors(&w)
 
 	db, err := sql.Open("mysql", "root:Blessing1!@tcp(database:3306)/products")
-	// error maybe here
-	// db, err := sql.Open("mysql", "root:Blessing1!@tcp(database:3307)/products")
+
 	if err != nil {
 		panic(err.Error())
 	}

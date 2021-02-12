@@ -6,7 +6,7 @@
     font-family:'Trispace';
 }
 
-.productContainer{
+#productContainer{
     margin: 60px;
     display: flex;
     justify-content: space-around;

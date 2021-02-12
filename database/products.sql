@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS products (id INT NOT NULL AUTO_INCREMENT, name VARCHA
 
 INSERT INTO products (name, description, price, image, category)
 VALUES 
-("Salon Tools", "Salon Latori this is Kat test. Lorem ipsum lorem haircare", 300.00, "images/salonTools.jpg", "tools"),
+("Salon Tools", "Salon Latori is great. Lorem ipsum lorem haircare", 300.00, "images/salonTools.jpg", "tools"),
 ("Shampoo", "Salon Latori ipsum lorem. Lorem ipsum lorem haircare", 20.00, "images/shampoo.jpg", "haircare"),
 ("Eyeliner", "Salon Latori ipsum lorem. Lorem ipsum lorem haircare", 30.00, "images/redPencils.jpg", "makeup"),
 ("Brush Set", "Salon Latori ipsum lorem. Lorem ipsum lorem haircare", 130.00, "images/blueBrushset.jpg", "makeup"),
