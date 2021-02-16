@@ -6,6 +6,7 @@ services:
       context: ./database
     environment:
       MYSQL_ROOT_PASSWORD: Blessing1!
+      # MYSQL_ALLOW_EMPTY_PASSWORD: yes
       MYSQL_DATABASE: products
     ports:
       - "3307:3306"

@@ -40,10 +40,27 @@
     <div id="filter">
         <!-- Create a dropdown -->
         <!-- Categories: New Arrivals, Value Sets, Makeup, HairCare, Best Sellers  -->
-        <label>Filter</label>
-        <input>   
+        <!-- <label>Filter</label>
+        <input>    -->
         <i class="fas fa-search"></i> 
+
+        <!-- test -->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Filter</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+              <!-- cannot see data or the lowHi function -->
+              <a onclick="return descendProducts(data)">Price: High to Low</a>
+              <a onclick="return ascendProducts(data)">Price: Low to High</a>
+              <a onclick="searchUserInput(data)" href="#blog">Haircare</a>
+              <a onclick="searchUserInput(data)" href="#contact">Makeup</a>
+              <a onclick="searchUserInput(data)" href="#custom">Skincare</a>
+              <a onclick="searchUserInput(data)" href="#support">Gifts</a>
+              <a onclick="showData(toolProducts)" href="#tools">Tools</a>
+            </div>
+          </div>
     </div>
+
 
     <figure id ="productContainer">   
     </figure>
