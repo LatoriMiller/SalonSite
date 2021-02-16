@@ -86,67 +86,27 @@ function descendProducts(data){
 }
 
 
-
-//FILTER BY CATEGOREY
-// const ByProduct = (props, type) => {
-//     console.log(props)
-//     let temp = props.Data.filter(item => item.tag === type);
-//     return temp;
-// }
-
-// https://www.youtube.com/watch?v=US63Q6AL0GI
-// function checkInput(pArray){
-//     const filtered = pArray.filter(function(value){
-//         return value >= 0
-//         //I believe I could subsitute if then statements here
-
-//     })
-//     console.log(filtered)
-// }
-
-// WORKS NEED TO WRAP IN A FUNCTION THAT IS CALLED ON CLICK AND WILL WORK WITH THE DATA OBJECT, USER INPUT AND ALL CATEGORIES AND .LOWERCASE
-// function searchUserInput (data){ 
-//   let haircare = data.map(function(p) {
-//     if (p.category === 'haircare'){
-//       return p
-//   }) 
-//     // console.log("haircare ", haircare);
-//     //set data = haircare;
-//     //show(data);
-//   }
-
-  // let makeup = data.map(function(p) {
-  //   if (p.category === 'makeup'){
-  //     return p;
-  //   }) 
-  //   // console.log("makeup ", makeup);
-
-  // let skincare = data.map(function(p) {
-  //     if (p.category === 'skincare'){
-  //       return p;
-  //     }) 
-  //     // console.log("skincare ", skincare);
-
-  // let gifts = data.map(function(p) {
-  //   if (p.category === 'gifts'){
-  //     return p;
-  //   })
-  //   // console.log("gifts ", gifts);
-
-  // let tools = data.map(function(p) {
-  //     if (p.category === 'tools'){
-  //       return p;
-  //     })
-      // console.log("tools ", tools);
-
-
-
- //Suggestions on the index loop that compares the last two using index greater >= 2
-  // testing index of
-    // return Math.sqrt(num)
-//   const index = newTodos.findIndex(function(todo, index){
-//     console.log(todo)
-//     return todo.title === "gym"
-// }) 
-// console.log(index)
-
+// Filter by category
+function searchUserInput (data, selection){ 
+    const hairProducts = data.filter( p => p.category === 'haircare');
+    const makeupProducts = data.filter( p => p.category === 'makeup');
+    const toolProducts = data.filter( p => p.category === 'tools');
+    const skinProducts = data.filter( p => p.category === 'skincare');
+    const giftProducts = data.filter( p => p.category === 'gift');
+    // make one for each category and then run show(data) to display
+    if (selection === 'haircare'){
+      show(hairProducts);
+    }
+    if (selection === 'makeup'){
+      show(makeupProducts);
+    }
+    if (selection === 'tools'){
+      show(toolProducts);
+    }
+    if (selection === 'skincare'){
+      show(skinProducts);
+    }
+    if (selection === 'gift'){
+      show(giftProducts);
+    }    
+}  
