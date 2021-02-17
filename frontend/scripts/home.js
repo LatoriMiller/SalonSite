@@ -5,9 +5,12 @@ function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
+    
+    // for loop moves through slides  
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
     }
+    // slide index increments and will restart once reaching the end of slides
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}    
     for (i = 0; i < dots.length; i++) {
@@ -15,5 +18,6 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
+    //calls the showSlides and increments the functions by 5 secs
     setTimeout(showSlides, 5000); 
 }

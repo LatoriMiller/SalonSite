@@ -1,5 +1,5 @@
 let data;
-console.log("Hello");
+// console.log("Hello");
 // fetch('http://localhost:8000/products')
 //   .then(response => response.json())
 //   .then(data => console.log(data));
@@ -51,13 +51,18 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
-  function filterFunction() {
-    var input, filter, ul, li, a, i;
+function filterFunction() {
+    let input, filter, ul, li, a, i;
+    //collects user input from the search input field
     input = document.getElementById("myInput");
     // console.log(input.value)
+    //setting input to handle case sensitivity 
     filter = input.value.toUpperCase();
+
     div = document.getElementById("myDropdown");
+    //pulls value from the a tag
     a = div.getElementsByTagName("a");
+    //compares the userinput to the innertext to find a match
     for (i = 0; i < a.length; i++) {
       txtValue = a[i].textContent || a[i].innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -71,17 +76,16 @@ function myFunction() {
 
 // Sort products by price in ascending order:
 function ascendProducts(data){
-    data.sort(function(a, b) {
+  //returns a sorted array based on comparing elements a and b  
+  data.sort(function(a, b) {
         return a.price - b.price;
-         //console.log(pArray);
-        //return parseFloat(a.price) - parseFloat(b.price);
     });
     show(data);
 }
 
 // For descending order use
 function descendProducts(data){
-    data.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+    data.sort((a, b) => (b.price) - (a.price));
     show(data);
 }
 

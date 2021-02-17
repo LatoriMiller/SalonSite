@@ -28,6 +28,7 @@ var db *sql.DB
 func main() {
 	router := mux.NewRouter()
 
+	//specifying the endpoint /product and then run fetchproduct()
 	router.HandleFunc("/products", fetchProducts).Methods("GET")
 
 	log.Println("listening on port 8000")
@@ -36,18 +37,17 @@ func main() {
 }
 
 func fetchProducts(w http.ResponseWriter, r *http.Request) {
+	//calling the enabling cors function
 	enableCors(&w)
 
-	//NEED TO UPDATE THE DOCKER COMPOSE.YML FILE WITH MYSQL PW ALSO NOT READING .ENV I DONT THINK GO GET GITHUB.COM/JOHO/goenv IS WORKING
-	// var err error
-	// var password = os.Getenv("DB_PW")
-	// db, err := sql.Open("mysql", fmt.Sprintf("root:%s@tcp(database:3306)/products", password))
 	db, err := sql.Open("mysql", "root:Blessing1!@tcp(database:3306)/products")
 
 	if err != nil {
 		panic(err.Error())
 	}
+	//close once the db function ends
 	defer db.Close()
+	//creates products slice
 	var products []product
 	// create a variable for the sql query
 	query := "select id, name, price, image, category, description from products"
