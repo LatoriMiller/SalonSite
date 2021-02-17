@@ -19,7 +19,6 @@
             <div class="dropdown-content">
                 <a href="./index.html">HOME</a>
                 <a href="./products.html">PRODUCTS</a>
-                <a href="./search.html">SEARCH</a>
             </div>
         </div>   
     </nav>
@@ -47,7 +46,7 @@
             <p>Time to look good.</p>
         </section>
         <div id="appointment" class="content-block">
-            <form>
+            <form action="/location" method="post">
                 <label for="first_name">First Name</label>  
                 <input type="text" id="first_name" placeholder="Jane" pattern="[a-zA-Z]+" required title="Enter a name e.g. Beyonce.">
 
@@ -65,13 +64,13 @@
                 <!-- <input type="text" id="your_time" placeholder="Tomorrow at 1pm" required> -->
                 <input type="datetime-local" id="your_time" name="your_time" required>
 
-                <label>Preferred Contact Method?</label>
-                <input type="radio" id="phone" value="phone" required>
+                <label for="bestContact">Preferred Contact Method?</label>
+                <input type="radio" id="phone" value="phone" name="bestContact" required>
                 <label for="phone">Phone</label><br>
-                <input type="radio" id="email" value="email" required>
+                <input type="radio" id="email" value="email" name="bestContact"required>
                 <label for="email">Email</label><br>
                 
-                <label>How did you hear about us?</label>
+                <label How did you hear about us?</label>
                 <input type="checkbox" id="conf">
                 <label for="conf">Conference</label>
                 <input type="checkbox" id="tv">
